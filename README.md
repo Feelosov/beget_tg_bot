@@ -15,6 +15,19 @@
       - Все узлы на сентябрь 2023
 - Мультиаккаунты
 - Удаление всех данных (из бота)
+- Создание диаграмм
+
+## Как создавать диаграммы
+
+Диаграммы создаются по расписанию. Для этого есть обработчик в Common/Cron.php . Включить можно из бота или в ПУ Beget с указанием времени запуска.
+
+**Запрос диаграммы с проверкой занимаемого места:**
+
+/usr/local/bin/php8.2 ~/<YOUR_DOMAIN>/public_html/<BOT_FOLDER>/index.php cron=true action=disk_usage account=<BEGET_ACCOUNT_NAME>
+
+**Запрос диаграммы со средней нагрузкой аккаунта по дням**
+
+usr/local/bin/php8.2 ~/<YOUR_DOMAIN>/public_html/<BOT_FOLDER>/index.php cron=true action=avg_load_by_day_chart days=<DAYS> account=<BEGET_ACCOUNT_NAME>
 
 ## Краткая инструкция: 
 
