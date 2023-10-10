@@ -19,11 +19,11 @@
 ## Краткая инструкция: 
 
 1. Заполните все файлы с префиксом tg_ в папке DB
-   - **tg_bot_base_directory** - если бот помещен не в корень, а в подпапку
+   - **tg_bot_base_directory** - если бот помещен не в корень, а в подпапку (включая /, например /beget_bot/subdir)
    - **tg_bot_owner** - Telegram ID пользователя
    - **tg_bot_secret_key** - Фрагмент для веб-хука для дополнительной проверки (?secret_key=YOUR_SECRET)
    - **tg_bot_token** - Токен бота, полученный у https://t.me/BotFather
-   - **tg_bot_url** - URL до бота, нужен чтобы отправлять изображения или переназначать веб-хук
+   - **tg_bot_url** - URL до бота (не включая папку tg_bot_base_directory), нужен чтобы отправлять изображения или переназначать веб-хук
 2. Направьте веб-хуки из Телеграма на index.php бота, примерно так: https://api.telegram.org/botYOUR_TOKEN/setwebhook?url=https://YOUR_SITE/BOT_DIR/index.php?secret_key=YOUR_SECRET
    -  **YOUR_TOKEN** - получите у https://t.me/BotFather
    -  **YOUR_SITE** - доменное имя, где бот лежит
