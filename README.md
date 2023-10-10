@@ -23,11 +23,11 @@
 
 **Запрос диаграммы с проверкой занимаемого места:**
 
-/usr/local/bin/php8.2 ~/<YOUR_DOMAIN>/public_html/<BOT_FOLDER>/index.php cron=true action=disk_usage account=<BEGET_ACCOUNT_NAME>
+<code>/usr/local/bin/php8.2 ~/<YOUR_DOMAIN>/public_html/<BOT_FOLDER>/index.php cron=true action=disk_usage account=<BEGET_ACCOUNT_NAME></code>
 
 **Запрос диаграммы со средней нагрузкой аккаунта по дням**
 
-usr/local/bin/php8.2 ~/<YOUR_DOMAIN>/public_html/<BOT_FOLDER>/index.php cron=true action=avg_load_by_day_chart days=<DAYS> account=<BEGET_ACCOUNT_NAME>
+<code>usr/local/bin/php8.2 ~/<YOUR_DOMAIN>/public_html/<BOT_FOLDER>/index.php cron=true action=avg_load_by_day_chart days=<DAYS> account=<BEGET_ACCOUNT_NAME></code>
 
 ## Краткая инструкция: 
 
