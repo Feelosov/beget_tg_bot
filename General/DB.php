@@ -139,7 +139,7 @@ class DB
     {
         $charts_dir = realpath(Config::get__db_dir__bot_charts_dir($account));
         $url_path = str_replace(realpath(Config::get__bot_root_dir()), '', $charts_dir);
-        $url = DB::get__bot_url() . '' . $url_path;
+        $url = self::get__bot_url() . '' . $url_path;
         return $url;
     }
 
@@ -202,7 +202,8 @@ class DB
      */
     public static function get__bot_url(): string
     {
-        return file_get_contents(Config::get__db_file__bot_url());
+        $dir = file_get_contents(Config::get__db_file__bot_dir());
+        return file_get_contents(Config::get__db_file__bot_url()) . $dir;
     }
 
     /**

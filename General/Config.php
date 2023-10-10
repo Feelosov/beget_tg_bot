@@ -92,13 +92,35 @@ class Config
     }
 
     /**
+     * Путь к файлу БД с папкой размещения бота (если не в корне бот)
+     *
+     * @return string
+     */
+    public static function get__db_file__bot_dir(): string
+    {
+        $file = self::get__bot_db_dir() . '/tg_bot_base_directory';
+
+        if (!file_exists($file)) :
+            file_put_contents($file, '');
+        endif;
+
+        return $file;
+    }
+
+    /**
      * Путь к файлу БД с урл до бота
      *
      * @return string
      */
     public static function get__db_file__bot_url(): string
     {
-        return self::get__bot_db_dir() . '/tg_bot_url';
+        $file = self::get__bot_db_dir() . '/tg_bot_url';
+
+        if (!file_exists($file)) :
+            file_put_contents($file, '');
+        endif;
+
+        return $file;
     }
 
     /**
@@ -108,7 +130,13 @@ class Config
      */
     public static function get__db_file__tg_bot_owner(): string
     {
-        return self::get__bot_db_dir() . '/tg_bot_owner';
+        $file = self::get__bot_db_dir() . '/tg_bot_owner';
+
+        if (!file_exists($file)) :
+            file_put_contents($file, '');
+        endif;
+
+        return $file;
     }
 
     /**
@@ -118,7 +146,13 @@ class Config
      */
     public static function get__db_file__tg_bot_token(): string
     {
-        return self::get__bot_db_dir() . '/tg_bot_token';
+        $file = self::get__bot_db_dir() . '/tg_bot_token';
+
+        if (!file_exists($file)) :
+            file_put_contents($file, '');
+        endif;
+
+        return $file;
     }
 
     /**
@@ -128,7 +162,13 @@ class Config
      */
     public static function get__db_file__tg_bot_secret_key(): string
     {
-        return self::get__bot_db_dir() . '/tg_bot_secret_key';
+        $file = self::get__bot_db_dir() . '/tg_bot_secret_key';
+
+        if (!file_exists($file)) :
+            file_put_contents($file, '');
+        endif;
+
+        return $file;
     }
 
     /**
@@ -138,7 +178,13 @@ class Config
      */
     public static function get__db_file__user_actions(): string
     {
-        return self::get__bot_db_dir() . '/user_actions';
+        $file = self::get__bot_db_dir() . '/user_actions';
+
+        if (!file_exists($file)) :
+            file_put_contents($file, '');
+        endif;
+
+        return $file;
     }
 
     /**
@@ -148,7 +194,13 @@ class Config
      */
     public static function get__db_file__encryption_key(): string
     {
-        return self::get__bot_db_dir() . '/encryption_key';
+        $file = self::get__bot_db_dir() . '/encryption_key';
+
+        if (!file_exists($file)) :
+            file_put_contents($file, '');
+        endif;
+
+        return $file;
     }
 
     // --------------------------------
